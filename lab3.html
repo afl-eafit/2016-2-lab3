@@ -10,7 +10,7 @@
 
 <body>
   <div style="text-align: center;">
-    <h1>Programming lab 3: &alpha;-equivalence in &lambda;-calculus</h1>
+    <h1>Programming lab 3: &alpha;-equivalence</h1>
 
     <p><b>Submission deadline: TBA</b></p>
   </div>
@@ -20,7 +20,11 @@
 
   <h3>Introduction</h3>
 
-  Untyped &lambda;-calculus is a model of computation equivalent to Turing Machines. Its a very simple language with three constructs: variables, applications and &lambda;-terms. The aim of this programming assignment is to implement the &alpha;-equivalence definition (Def 1.17) proposed in [Hindley and Seldin, 2008].
+  Untyped &lambda;-calculus is a model of computation equivalent to
+  Turing Machines. Its a very simple language with three constructs:
+  variables, applications and &lambda;-terms. The aim of this
+  programming assignment is to implement the &alpha;-equivalence
+  between &lambda;-terms [Hindley and Seldin, 2008, Def 1.17].
 
   <h3>Assignment (80%)</h3>
 
@@ -30,8 +34,8 @@
     "https://github.com/afl-eafit/2016-2-lab3">2016-2-lab3</a>.
 
       <ul>
-        <li>The module <code>LamTerm.hs</code> defines a data &lambda;-terms.</li>
-
+        <li>The module <code>LamTerm.hs</code> defines a data
+        &lambda;-terms.</li>
       </ul>
     </li>
 
@@ -39,7 +43,8 @@
       <pre>
         alphaEq :: Term -&gt; Term -&gt; Bool
       </pre>
-      that takes two &lambda;-terms and tells if they are &alpha;-equivalent or not, as described by definition 1.17.
+      that takes two &lambda;-terms and tells if they are
+      &alpha;-equivalent or not, as described by definition 1.17.
     </li>
 
     <li>(10%)
@@ -134,8 +139,9 @@
 
   <h3>Bibliography</h3>
 
-  <p>J. Roger Hindley and Jonathan P. Seldin
-  (2008). Lambda-Calculus and Combinators. 1st ed. Cambridge University Press.</p>
+  <p>J. Roger Hindley and Jonathan P. Seldin (2008). Lambda-Calculus
+  and Combinators. An Introduction. Cambridge University
+  Press. Cambridge University Press.</p>
 
   <hr/>
 
@@ -151,6 +157,5 @@
         1.1" height="31" width="88" /></a></td>
     </tr>
   </table>
-
 </body>
 </html>
