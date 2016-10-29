@@ -6,10 +6,10 @@ import LamTerm
 t1 :: Term
 t1 = App (Lam 'x' $ Lam 'y' $ Var 'x') (Lam 'z' $ Var 'z')
 
--- | This is the λ-term (λy.z)(λy.x).
+-- | This is the λ-term λxy.x(xy)
 t2 :: Term
-t2 = App (Lam 'y' $ Var 'z') (Lam 'y' $ Var 'x')
+t2 = Lam 'x' $ Lam 'y' $ App (Var 'x') (App (Var 'x') (Var 'y'))
 
--- | This is the λ-term (λu.w)(λu.v).
+-- | This is the λ-term λuv.u(uv)
 t3 :: Term
-t3 = App (Lam 'u' $ Var 'w') (Lam 'u' $ Var 'v')
+t3 = Lam 'u' $ Lam 'y' $ App (Var 'u') (App (Var 'u') (Var 'y'))
