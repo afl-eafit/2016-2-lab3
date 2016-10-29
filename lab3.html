@@ -5,12 +5,12 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Alpha-Equivalence</title>
+    <title>Alpha-Congruence</title>
   </head>
 
 <body>
   <div style="text-align: center;">
-    <h1>Programming lab 3: Alpha-Equivalence</h1>
+    <h1>Programming lab 3: Alpha-Congruence</h1>
 
     <p><b>Submission deadline: Tuesday, November 8, 2016
     (11:59 pm)</b></p>
@@ -24,9 +24,8 @@
   <p>Untyped &lambda;-calculus is a model of computation equivalent to
   Turing Machines. Its a very simple language with three constructs:
   variables, applications and &lambda;-abstractions. The aim of this
-  programming assignment is to implement the &alpha;-equivalence
-  between &lambda;-terms [Hindley and Seldin, 2008, Definition
-  1.17].</p>
+  programming assignment is to determine if two &lambda;-terms are
+  &alpha;-congruent [Hindley and Seldin, 2008, Definition 1.17].</p>
 
   <h3>Assignment (80%)</h3>
 
@@ -44,10 +43,10 @@
     <li>(70%) Using the module <code>LamTerm.hs</code> defines the
     function
       <pre>
-        alphaEq :: Term -&gt; Term -&gt; Bool
+        alphaCong :: Term -&gt; Term -&gt; Bool
       </pre>
       that takes two &lambda;-terms and tells if they are
-      &alpha;-equivalent or not, as described by Definition 1.17.
+      &alpha;-congruent or not, as described by Definition 1.17.
     </li>
 
     <li>(10%)
@@ -71,13 +70,13 @@
   repository, this is what a sample input-output looks like:</p>
 
   <pre>
-    GHCi&gt; alphaEq t1 t1
+    GHCi&gt; alphaCong t1 t1
     True
 
-    GHCi&gt; alphaEq t2 t3
+    GHCi&gt; alphaCong t2 t3
     True
 
-    GHCi&gt; alphaEq t1 t2
+    GHCi&gt; alphaCong t1 t2
     False
   </pre>
 
